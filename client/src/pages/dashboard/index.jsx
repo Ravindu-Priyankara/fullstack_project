@@ -20,6 +20,8 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import Diversity2Icon from '@mui/icons-material/Diversity2';
+import { yellow } from "@mui/material/colors";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -53,6 +55,101 @@ const Dashboard = () => {
           </Button>
         </Box>
       </Box>
+
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        {/*Email sent icon */}
+      <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
+            <Box
+              width="100%"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <StatBox
+                title="12"
+                subtitle="Emails Sent"
+                progress="0.75"
+                increase="+14%"
+                icon={
+                  <EmailIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+          </Grid>
+
+          {/*done Projects */}
+          <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
+            <Box
+              width="100%"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <StatBox
+                title="43"
+                subtitle="Completed Projects"
+                progress="0.50"
+                increase="+21%"
+                icon={
+                  <Diversity2Icon
+                    sx={{ color: colors.blueAccent[300], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+          </Grid>
+
+          {/* Team members */}
+          <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
+            <Box
+              width="100%"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <StatBox
+                title="4"
+                subtitle="Team Members"
+                progress="0.30"
+                increase="-5%"
+                icon={
+                  <PersonAddIcon
+                    sx={{ color: colors.blueAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+          </Grid>
+
+          <Grid xs={12} sm={12} md={6} lg={3} xl={3}>
+            <Box
+              width="100%"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <StatBox
+                title="1"
+                subtitle="Issues"
+                progress="0.80"
+                increase="+3%"
+                icon={
+                  <TrafficIcon
+                    sx={{ color: colors.redAccent[500], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+          </Grid>
+
+          
+      </Grid>
     </Box>
   );
 };

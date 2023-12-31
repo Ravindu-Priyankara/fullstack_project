@@ -1,4 +1,3 @@
-// docs https://github.com/azouaoui-med/react-pro-sidebar
 import { useState } from "react";
 import { Menu, Sidebar, MenuItem } from "react-pro-sidebar";
 import { useProSidebar } from "react-pro-sidebar";
@@ -114,7 +113,7 @@ const MyProSidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
+                  User
                 </Typography>
                 <IconButton
                   onClick={
@@ -154,12 +153,14 @@ const MyProSidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Harun Jeylan
+                  {/*User name providing section*/}
+                  Ravindu Priyankara
                 </Typography>
               </Box>
             </Box>
           )}
           <Box paddingLeft={collapsed ? undefined : "10%"}>
+            {/*Dashboard */}
             <Item
               title="Dashboard"
               to="/"
@@ -167,7 +168,7 @@ const MyProSidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
+            {/*Data */}
             <Typography
               variant="h6"
               color={colors.grey[300]}
@@ -175,6 +176,7 @@ const MyProSidebar = () => {
             >
               Data
             </Typography>
+            {/*Team */}
             <Item
               title="Manage Team"
               to="/team"
@@ -183,7 +185,7 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Contacts Information"
+              title="Board"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}

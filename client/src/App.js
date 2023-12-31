@@ -16,6 +16,7 @@ import Line from "./pages/line";
 import Pie from "./pages/pie";
 import FAQ from "./pages/faq";
 import Geography from "./pages/geography";
+import Index from "./pages/landing";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -28,7 +29,7 @@ const App = () => {
             <main>
               <Topbar />
               <Routes>
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/" element={<Index />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
@@ -39,6 +40,7 @@ const App = () => {
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/geography" element={<Geography />} />
+                <Route path="/dashboard" element={<Dashboard />} />
               </Routes>
             </main>
           </div>

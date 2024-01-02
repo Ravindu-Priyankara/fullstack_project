@@ -45,12 +45,12 @@ const BarChart = ({isDashboard=false}) => {
                 }
             }}
             keys={[
-                'hot dog',
-                'burger',
-                'sandwich',
-                'kebab',
-                'fries',
-                'donut'
+                'python',
+                'java',
+                'c++',
+                'node',
+                'swift',
+                'flutter'
             ]}
             indexBy="country"
             margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
@@ -83,13 +83,13 @@ const BarChart = ({isDashboard=false}) => {
             fill={[
                 {
                     match: {
-                        id: 'fries'
+                        id: 'swift'
                     },
                     id: 'dots'
                 },
                 {
                     match: {
-                        id: 'sandwich'
+                        id: 'c++'
                     },
                     id: 'lines'
                 }

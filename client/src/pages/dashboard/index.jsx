@@ -147,7 +147,170 @@ const Dashboard = () => {
               />
             </Box>
           </Grid>
+          {/*Charts */}
+          <Grid
+            xs={12}
+            sm={12}
+            md={8}
+            lg={8}
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            {/*Project Descriptor */}
+            <Grid xs={12}>
+              <Box backgroundColor={colors.primary[400]}>
+                <Box
+                  mt="25px"
+                  p="0 30px"
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                >
+                  <Box>
+                    <Typography
+                      variant="h5"
+                      fontWeight="600"
+                      color={colors.grey[100]}
+                    >
+                      Project Desscriptor
+                    </Typography>
+                    <Typography
+                      variant="h5"
+                      fontWeight="600"
+                      color={colors.greenAccent[500]}
+                    >
+                      12 projects
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <IconButton>
+                      <DownloadOutlinedIcon
+                        sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                      />
+                    </IconButton>
+                  </Box>
+                </Box>
+                <Box height="250px" m="-20px 0 0 0">
+                  <LineChart isDashboard={true} />
+                </Box>
+              </Box>
+            </Grid>
 
+
+            <Grid xs={12} sm={12} md={6}>
+              <Box backgroundColor={colors.primary[400]} p="30px">
+                <Typography variant="h5" fontWeight="600">
+                  Project Success Rates
+                </Typography>
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                  mt="25px"
+                >
+                  <ProgressCircle size="125" />
+                  <Typography
+                    variant="h5"
+                    color={colors.greenAccent[500]}
+                    sx={{ mt: "15px" }}
+                  >
+                    98.9 %
+                  </Typography>
+                  <Typography>
+                    Includes foreign projects
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid xs={12} sm={12} md={6}>
+              <Box backgroundColor={colors.primary[400]}>
+                <Typography
+                  variant="h5"
+                  fontWeight="600"
+                  sx={{ padding: "30px 30px 0 30px" }}
+                >
+                  Used Languages
+                </Typography>
+                <Box height="250px" mt="-20px">
+                  <BarChart isDashboard={true} />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid xs={12}>
+              <Box backgroundColor={colors.primary[400]} padding="30px">
+                <Typography
+                  variant="h5"
+                  fontWeight="600"
+                  sx={{ marginBottom: "15px" }}
+                >
+                  Clients
+                </Typography>
+                <Box height="200px">
+                  <GeographyChart isDashboard={true} />
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
+            <Box
+              backgroundColor={colors.primary[400]}
+              maxHeight="100vh"
+              overflow="auto"
+              m="25px 0 0 0"
+            >
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                borderBottom={`4px solid ${colors.primary[500]}`}
+                color={colors.grey[100]}
+                p="15px"
+              >
+                <Typography
+                  variant="h5"
+                  fontWeight="600"
+                  color={colors.grey[100]}
+                >
+                  Your Completed Projects
+                </Typography>
+              </Box>
+              {mockTransactions.map((transaction, i) => {
+                return (
+                  <Box
+                    key={`${transaction}-${i}`}
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    borderBottom={`4px solid ${colors.primary[500]}`}
+                    p="15px"
+                  >
+                    <Box>
+                      <Typography
+                        variant="h5"
+                        fontWeight="600"
+                        color={colors.greenAccent[100]}
+                      >
+                        {transaction.txId}
+                      </Typography>
+                      <Typography color={colors.grey[100]}>
+                        {transaction.user}
+                      </Typography>
+                    </Box>
+                    <Box color={colors.grey[100]}>{transaction.date}</Box>
+                    <Box
+                      color={colors.greenAccent[500]}
+                      p="5px 10px"
+                      borderRadius="4px"
+                    >
+                      {transaction.cost}
+                    </Box>
+                  </Box>
+                );
+              })}
+            </Box>
+          </Grid>
           
       </Grid>
     </Box>

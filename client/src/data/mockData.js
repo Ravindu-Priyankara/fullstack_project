@@ -269,131 +269,131 @@ export const mockDataInvoices = [
 export const mockTransactions = [
   {
     txId: "01e4dsa",
-    user: "johndoe",
+    user: "Ravindu",
     date: "2021-09-01",
-    cost: "43.95"
+    cost: "Completed"
   },
   {
     txId: "0315dsaa",
-    user: "jackdower",
+    user: "Ravindu",
     date: "2022-04-01",
-    cost: "133.45"
+    cost: "Completed"
   },
   {
     txId: "01e4dsa",
-    user: "aberdohnny",
+    user: "Ravindu",
     date: "2021-09-01",
-    cost: "43.95"
+    cost: "Completed"
   },
   {
     txId: "51034szv",
-    user: "goodmanave",
+    user: "Ravindu",
     date: "2022-11-05",
-    cost: "200.95"
+    cost: "Completed"
   },
   {
     txId: "0a123sb",
-    user: "stevebower",
+    user: "Ravindu",
     date: "2022-11-02",
-    cost: "13.55"
+    cost: "Completed"
   },
   {
     txId: "01e4dsa",
-    user: "aberdohnny",
+    user: "Ravindu",
     date: "2021-09-01",
-    cost: "43.95"
+    cost: "Completed"
   },
   {
     txId: "120s51a",
-    user: "wootzifer",
+    user: "Ravindu",
     date: "2019-04-15",
-    cost: "24.20"
+    cost: "Completed"
   },
   {
     txId: "0315dsaa",
-    user: "jackdower",
+    user: "Ravindu",
     date: "2022-04-01",
-    cost: "133.45"
+    cost: "Completed"
   }
 ];
 
 export const mockBarData = [
   {
     country: "AD",
-    "hot dog": 137,
-    "hot dogColor": "hsl(229, 70%, 50%)",
-    burger: 96,
-    burgerColor: "hsl(296, 70%, 50%)",
-    kebab: 72,
-    kebabColor: "hsl(97, 70%, 50%)",
-    donut: 140,
-    donutColor: "hsl(340, 70%, 50%)"
+    "python": 137,
+    "pythonColor": "hsl(229, 70%, 50%)",
+    java: 96,
+    javaColor: "hsl(296, 70%, 50%)",
+    node: 72,
+    nodeColor: "hsl(97, 70%, 50%)",
+    flutter: 140,
+    flutterColor: "hsl(340, 70%, 50%)"
   },
   {
     country: "AE",
-    "hot dog": 55,
-    "hot dogColor": "hsl(307, 70%, 50%)",
-    burger: 28,
-    burgerColor: "hsl(111, 70%, 50%)",
-    kebab: 58,
-    kebabColor: "hsl(273, 70%, 50%)",
-    donut: 29,
-    donutColor: "hsl(275, 70%, 50%)"
+    "python": 55,
+    "pythonColor": "hsl(307, 70%, 50%)",
+    java: 28,
+    javaColor: "hsl(111, 70%, 50%)",
+    node: 58,
+    nodeColor: "hsl(273, 70%, 50%)",
+    flutter: 29,
+    flutterColor: "hsl(275, 70%, 50%)"
   },
   {
     country: "AF",
-    "hot dog": 109,
-    "hot dogColor": "hsl(72, 70%, 50%)",
-    burger: 23,
-    burgerColor: "hsl(96, 70%, 50%)",
-    kebab: 34,
-    kebabColor: "hsl(106, 70%, 50%)",
-    donut: 152,
-    donutColor: "hsl(256, 70%, 50%)"
+    "python": 109,
+    "pythonColor": "hsl(72, 70%, 50%)",
+    java: 23,
+    javaColor: "hsl(96, 70%, 50%)",
+    node: 34,
+    nodeColor: "hsl(106, 70%, 50%)",
+    flutter: 152,
+    flutterColor: "hsl(256, 70%, 50%)"
   },
   {
     country: "AG",
-    "hot dog": 133,
-    "hot dogColor": "hsl(257, 70%, 50%)",
-    burger: 52,
-    burgerColor: "hsl(326, 70%, 50%)",
-    kebab: 43,
-    kebabColor: "hsl(110, 70%, 50%)",
-    donut: 83,
-    donutColor: "hsl(9, 70%, 50%)"
+    "python": 133,
+    "pythonColor": "hsl(257, 70%, 50%)",
+    java: 52,
+    javaColor: "hsl(326, 70%, 50%)",
+    node: 43,
+    nodeColor: "hsl(110, 70%, 50%)",
+    flutter: 83,
+    flutterColor: "hsl(9, 70%, 50%)"
   },
   {
     country: "AI",
-    "hot dog": 81,
-    "hot dogColor": "hsl(190, 70%, 50%)",
-    burger: 80,
-    burgerColor: "hsl(325, 70%, 50%)",
-    kebab: 112,
-    kebabColor: "hsl(54, 70%, 50%)",
-    donut: 35,
-    donutColor: "hsl(285, 70%, 50%)"
+    "python": 81,
+    "pythonColor": "hsl(190, 70%, 50%)",
+    java: 80,
+    javaColor: "hsl(325, 70%, 50%)",
+    node: 112,
+    nodeColor: "hsl(54, 70%, 50%)",
+    flutter: 35,
+    flutterColor: "hsl(285, 70%, 50%)"
   },
   {
     country: "AL",
-    "hot dog": 66,
-    "hot dogColor": "hsl(208, 70%, 50%)",
-    burger: 111,
-    burgerColor: "hsl(334, 70%, 50%)",
-    kebab: 167,
-    kebabColor: "hsl(182, 70%, 50%)",
-    donut: 18,
-    donutColor: "hsl(76, 70%, 50%)"
+    "python": 66,
+    "pythonColor": "hsl(208, 70%, 50%)",
+    java: 111,
+    javaColor: "hsl(334, 70%, 50%)",
+    node: 167,
+    nodeColor: "hsl(182, 70%, 50%)",
+    flutter: 18,
+    flutterColor: "hsl(76, 70%, 50%)"
   },
   {
     country: "AM",
-    "hot dog": 80,
-    "hot dogColor": "hsl(87, 70%, 50%)",
-    burger: 47,
-    burgerColor: "hsl(141, 70%, 50%)",
-    kebab: 158,
-    kebabColor: "hsl(224, 70%, 50%)",
-    donut: 49,
-    donutColor: "hsl(274, 70%, 50%)"
+    "python": 80,
+    "pythonColor": "hsl(87, 70%, 50%)",
+    java: 47,
+    javaColor: "hsl(141, 70%, 50%)",
+    node: 158,
+    nodeColor: "hsl(224, 70%, 50%)",
+    flutter: 49,
+    flutterColor: "hsl(274, 70%, 50%)"
   }
 ];
 
@@ -432,51 +432,51 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "Bugs",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
+        x: "a",
         y: 101
       },
       {
-        x: "helicopter",
+        x: "b",
         y: 75
       },
       {
-        x: "boat",
+        x: "c",
         y: 36
       },
       {
-        x: "train",
+        x: "d",
         y: 216
       },
       {
-        x: "subway",
+        x: "e",
         y: 35
       },
       {
-        x: "bus",
+        x: "f",
         y: 236
       },
       {
-        x: "car",
+        x: "g",
         y: 88
       },
       {
-        x: "moto",
+        x: "h",
         y: 232
       },
       {
-        x: "bicycle",
+        x: "i",
         y: 281
       },
       {
-        x: "horse",
+        x: "j",
         y: 1
       },
       {
-        x: "skateboard",
+        x: "k",
         y: 35
       },
       {
@@ -486,51 +486,51 @@ export const mockLineData = [
     ]
   },
   {
-    id: "france",
+    id: "Testing",
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
+        x: "a",
         y: 212
       },
       {
-        x: "helicopter",
+        x: "b",
         y: 190
       },
       {
-        x: "boat",
+        x: "c",
         y: 270
       },
       {
-        x: "train",
+        x: "d",
         y: 9
       },
       {
-        x: "subway",
+        x: "e",
         y: 75
       },
       {
-        x: "bus",
+        x: "f",
         y: 175
       },
       {
-        x: "car",
+        x: "g",
         y: 33
       },
       {
-        x: "moto",
+        x: "h",
         y: 189
       },
       {
-        x: "bicycle",
+        x: "i",
         y: 97
       },
       {
-        x: "horse",
+        x: "j",
         y: 87
       },
       {
-        x: "skateboard",
+        x: "k",
         y: 299
       },
       {
@@ -540,51 +540,51 @@ export const mockLineData = [
     ]
   },
   {
-    id: "us",
+    id: "Security",
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
+        x: "a",
         y: 191
       },
       {
-        x: "helicopter",
+        x: "b",
         y: 136
       },
       {
-        x: "boat",
+        x: "c",
         y: 91
       },
       {
-        x: "train",
+        x: "d",
         y: 190
       },
       {
-        x: "subway",
+        x: "e",
         y: 211
       },
       {
-        x: "bus",
+        x: "f",
         y: 152
       },
       {
-        x: "car",
+        x: "g",
         y: 189
       },
       {
-        x: "moto",
+        x: "h",
         y: 152
       },
       {
-        x: "bicycle",
+        x: "i",
         y: 8
       },
       {
-        x: "horse",
+        x: "j",
         y: 197
       },
       {
-        x: "skateboard",
+        x: "k",
         y: 107
       },
       {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
@@ -7,18 +7,28 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
+import AddIcon from '@mui/icons-material/Add';
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+import axios from 'axios';
 
 const Team = () => {
+  const [users, setUsers] = useState([]);
+  
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
   const columns = [
+    {/* ID */},
     { field: "id", headerName: "Id" },
+    {/* Name */},
     {
       field: "name",
       headerName: "Name",
       width: 200,
       cellClassName: "name-column--cell",
     },
+    {/* Age */},
     {
       field: "age",
       headerName: "Age",
@@ -26,11 +36,14 @@ const Team = () => {
       headerAlign: "left",
       align: "left",
     },
+    {/* Phone number */},
     { field: "phone", headerName: "Phone Number", width: 100 },
+    {/* email address */},
     { field: "email", headerName: "Email", width: 200 },
+    {/* Who is */},
     {
       field: "access",
-      headerName: "Access Llvel",
+      headerName: "Access Level",
       width: 100,
       renderCell: ({ row: { access } }) => {
         return (
@@ -56,6 +69,38 @@ const Team = () => {
           </Box>
         );
       },
+    },
+    {/* Add User */},
+    {
+      field: "add",
+      headerName: "Add or remove user",
+      width: 100,
+      renderCell: ({ row: { add } }) => {
+        return (
+          <Box
+            width="100%"
+            m="0 auto"
+            p="5px"
+            display="flex"
+            justifyContent="center"
+            backgroundColor={
+              add === "0"
+                ? colors.greenAccent[600]
+                : colors.redAccent[600]
+            }
+            borderRadius="4px"
+          >
+            {add === "0" && <PersonAddAltIcon/>}
+            {add === "1" && <PersonRemoveIcon/>}
+            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+              {add === "0" && "ADD"}
+              {add === "1" && "REMOVE"}
+            </Typography>
+          </Box>
+        );
+      },
+
+      
     },
   ];
   return (

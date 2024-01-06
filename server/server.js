@@ -1,17 +1,49 @@
-const express = require("express");
+/*const express = require('express')
+
+const cors = require('cors')
+const connectDB = require('./db/conn');
+
+
+const app = express()
+app.use(cors())
+app.use(express.json())
+
+mongoose.connect('mongodb://localhost:27017/fullstack')
+
+connectDB();
+
+
+
+app.get('/getUsers',(req,res)=>{
+  UserModel.find({}).then(function(users){
+    res.json(users)
+  }).catch(function(err) {
+    console.log(err)
+  })
+})
+
+app.listen(3001, () =>{
+  console.log("Server is running")
+})*/
+
+// server.js
+const express = require('express');
+const cors = require('cors');
+const { connectDB } = require('./db/conn'); // Import the connectDB function
+const recordRouter = require('./routes/record'); // Import the recordRouter
+
 const app = express();
-const cors = require("cors");
-require("dotenv").config({ path: "./config.env" });
-const port = process.env.PORT || 5001;
+const PORT = 5001;
+
 app.use(cors());
 app.use(express.json());
-app.use(require("./routes/record"));
-// get driver connection
-const dbo = require("./db/conn");
-app.listen(port, () => {
-  // perform a database connection when server starts
-  dbo.connectToServer(function (err) {
-    if (err) console.error(err);
-   });
-  console.log(`Server is running on port: ${port}`);
+
+// Connect to MongoDB
+connectDB();
+
+// Use the recordRouter for /getUsers route
+app.use('/record', recordRouter);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

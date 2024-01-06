@@ -1,26 +1,20 @@
-const { MongoClient } = require("mongodb");
-const Db = process.env.ATLAS_URI;
-const client = new MongoClient(Db, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
- 
-var _db;
- 
-module.exports = {
-  connectToServer: function (callback) {
-    client.connect(function (err, db) {
-      // Verify we got a good "db" object
-      if (db)
-      {
-        _db = db.db("employees");
-        console.log("Successfully connected to MongoDB."); 
-      }
-      return callback(err);
-         });
-  },
- 
-  getDb: function () {
-    return _db;
-  },
+// db/conn.js
+const mongoose = require('mongoose');
+const UserModel = require('../model/Users'); // Import the UserModel
+
+const mongoURI = 'mongodb://localhost:27017/fullstack';
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(mongoURI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+    process.exit(1); // Exit the process if unable to connect
+  }
 };
+
+module.exports = { connectDB, UserModel };

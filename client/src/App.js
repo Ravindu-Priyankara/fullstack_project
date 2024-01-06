@@ -17,6 +17,7 @@ import Pie from "./pages/pie";
 import FAQ from "./pages/faq";
 import Geography from "./pages/geography";
 import Index from "./pages/landing";
+import Test from "./pages/test";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -41,6 +42,7 @@ const App = () => {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/geography" element={<Geography />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/test" element={<Test/>} />
               </Routes>
             </main>
           </div>

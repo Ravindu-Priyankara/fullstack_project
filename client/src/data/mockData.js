@@ -39,7 +39,7 @@ axios.get('http://localhost:5001/record/getUsers')
   .catch(err => console.log(err));
 
 
-export const mockDataContacts = [
+/*export const mockDataContacts = [
   {
     id: 1,
     name: "Jon Snow",
@@ -161,9 +161,35 @@ export const mockDataContacts = [
     zipCode: "1234",
     registrarId: 92197
   }
-];
+];*/
 
-export const mockDataInvoices = [
+export const mockDataContacts = [];
+
+// Fetch contact data from the server
+axios.get('http://localhost:5001/record/getUsers')
+  .then(response => {
+    const users = response.data;
+
+    // Map the retrieved contacts to the mockDataContacts format
+    const mappedUsers = users.map(user => ({
+      id: user._id, // Assuming your contact object has an _id field
+      name: user.name,
+      email: user.email,
+      age: user.age,
+      phone: user.phone,
+      address: user.address,
+      city: user.city,
+      zipCode: user.zip,
+      registrarId: user._id,
+    }));
+
+    // Set the mapped contacts to the mockDataContacts array
+    mockDataContacts.push(...mappedUsers);
+  })
+  .catch(err => console.log(err));
+
+
+/*export const mockDataInvoices = [
   {
     id: 1,
     name: "Jon Snow",
@@ -228,7 +254,28 @@ export const mockDataInvoices = [
     phone: "(222)444-5555",
     date: "05/02/2021"
   }
-];
+];*/
+
+export const mockDataInvoices = [];
+
+axios.get('http://localhost:5001/record/getProjects')
+  .then(response => {
+    const projects = response.data;
+
+    // Map the retrieved invoices to the mockDataInvoices format
+    const mappedProjects = projects.map(project => ({
+      id: project._id, // Assuming your invoice object has an _id field
+      name: project.name,
+      email: project.email,
+      project: project.project, // Assuming cost is a number in the database
+      phone: project.phone_number,
+      date: project.date, // Format date as needed
+    }));
+
+    // Set the mapped invoices to the mockDataInvoices array
+    mockDataInvoices.push(...mappedProjects);
+  })
+  .catch(err => console.log(err));
 
 export const mockTransactions = [
   {

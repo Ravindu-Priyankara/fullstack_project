@@ -1,6 +1,7 @@
 // db/conn.js
 const mongoose = require('mongoose');
 const UserModel = require('../model/Users'); // Import the UserModel
+const ProjectsModel = require('../model/Project'); // Import the Projects
 
 const mongoURI = 'mongodb://localhost:27017/fullstack';
 
@@ -17,4 +18,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = { connectDB, UserModel };
+module.exports = { connectDB, UserModel, ProjectsModel };

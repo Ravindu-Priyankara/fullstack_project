@@ -22,11 +22,11 @@ const Invoices = () => {
     { field: "phone", headerName: "Phone Number", width: 100 },
 
     {
-      field: "cost",
-      headerName: "Cost",
+      field: "project",
+      headerName: "project",
       width: 100,
-      renderCell: ({ row: { cost } }) => {
-        return <Typography color={colors.greenAccent[500]}>${cost}</Typography>;
+      renderCell: ({ row: { project } }) => {
+        return <Typography color={colors.greenAccent[500]}>{project}</Typography>;
       },
     },
     { field: "date", headerName: "Date", width: 100 },
@@ -34,7 +34,7 @@ const Invoices = () => {
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="INVOICES" subtitle="welcome to you Invoices" />
+        <Header title="Projects" subtitle="welcome to your Projects" />
       </Box>
       <Box
         m="8px 0 0 0"

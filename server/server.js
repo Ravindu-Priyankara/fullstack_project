@@ -32,6 +32,7 @@ const cors = require('cors');
 const { connectDB } = require('./db/conn'); // Import the connectDB function
 const recordRouter = require('./routes/record'); // Import the recordRouter
 
+
 const app = express();
 const PORT = 5001;
 

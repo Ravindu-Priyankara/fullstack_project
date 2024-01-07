@@ -23,6 +23,9 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import SwitchRightOutlinedIcon from "@mui/icons-material/SwitchRightOutlined";
 import SwitchLeftOutlinedIcon from "@mui/icons-material/SwitchLeftOutlined";
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
+
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -185,14 +188,21 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Board"
+              title="Start Project"
+              to="/card"
+              icon={<AccountTreeIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Board Members"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
+              title="Your Projects"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
@@ -204,7 +214,7 @@ const MyProSidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 20px 5px 20px" }}
             >
-              Pages
+              Settings
             </Typography>
             <Item
               title="Profile Form"
@@ -214,7 +224,7 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
+              title="To Do"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
@@ -233,7 +243,7 @@ const MyProSidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 20px 5px 20px" }}
             >
-              Charts
+              Project Charts
             </Typography>
             <Item
               title="Bar Chart"

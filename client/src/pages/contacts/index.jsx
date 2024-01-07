@@ -35,7 +35,7 @@ const Contacts = () => {
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="CONTACTS" subtitle="welcome to you Contacts" />
+        <Header title="Board" subtitle="welcome to your Board Members" />
       </Box>
       <Box
         m="8px 0 0 0"

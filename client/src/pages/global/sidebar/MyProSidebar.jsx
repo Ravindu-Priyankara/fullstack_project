@@ -189,7 +189,7 @@ const MyProSidebar = () => {
             />
             <Item
               title="Start Project"
-              to="/card"
+              to="/project"
               icon={<AccountTreeIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -231,8 +231,15 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="FAQ Page"
-              to="/faq"
+              title="Issue Page"
+              to="/issue"
+              icon={<HelpOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Issues"
+              to="/issueTable"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

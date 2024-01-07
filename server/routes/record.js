@@ -3,6 +3,8 @@ const express = require('express');
 const { UserModel } = require('../db/conn'); // Import the UserModel
 const {ProjectsModel } = require('../db/conn')
 const authService = require('../services/authService');
+const ProModel = require('../model/pro')
+const IssueModel = require('../model/issue')
 
 
 const router = express.Router();
@@ -63,7 +65,48 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.post('/projects/create', async (req, res) => {
+  const { projectName, projectDescription, projectManager } = req.body;
 
+  try {
+    // Create a new project document in MongoDB
+    const newPro = new ProModel({ projectName, projectDescription, projectManager });
+    await newPro.save();
+
+    res.json({ message: 'Project created successfully' });
+  } catch (error) {
+    console.error('Project creation error:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+router.post('/projects/issue', async (req, res) => {
+  const { projectName, issueDescription } = req.body;
+
+  try {
+    // Create a new project document in MongoDB
+    const newIssue = new IssueModel({ projectName, issueDescription });
+    await newIssue.save();
+
+    res.json({ message: 'Issue created successfully' });
+  } catch (error) {
+    console.error('Project creation error:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+router.get('/project/getIssue', async (req, res) => {
+  try {
+    const issues = await IssueModel.find({});
+    res.json(issues);
+  } catch (error) {
+    console.error('Error fetching projects:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+  /*UserModel.find()
+  .then(users => res.json(users))
+  .catch(err => res.json(err))*/
+});
 
 
 module.exports = router;

@@ -14,23 +14,21 @@ const FormInput = styled(TextField)({
   marginBottom: 2,
 });
 
-const ProjectForm = () => {
+const IssueForm = () => {
   const [projectName, setProjectName] = useState('');
-  const [projectDescription, setProjectDescription] = useState('');
-  const [projectManager, setProjectManager] = useState('');
+  const [issueDescription, setIssueDescription] = useState('');
+  
 
   const handleCreateProject = async () => {
     try {
-      const response = await axios.post('http://localhost:5001/record/projects/create', {
+      const response = await axios.post('http://localhost:5001/record/projects/issue', {
         projectName,
-        projectDescription,
-        projectManager,
+        issueDescription,
       });
 
       console.log(response.data.message);
       setProjectName('');
-      setProjectDescription('');
-      setProjectManager('');
+      setIssueDescription('');
     } catch (error) {
       console.error('Project creation failed:', error.response.data.message);
     }
@@ -40,7 +38,7 @@ const ProjectForm = () => {
     <CenteredCard>
       <CardContent>
         <Typography variant="h5" gutterBottom>
-          Create New Project
+          Create New Issue
         </Typography>
         <FormInput
           label="Project Name"
@@ -50,27 +48,20 @@ const ProjectForm = () => {
           onChange={(e) => setProjectName(e.target.value)}
         />
         <FormInput
-          label="Project Description"
+          label="Issue Description"
           fullWidth
           variant="outlined"
           multiline
           rows={3}
-          value={projectDescription}
-          onChange={(e) => setProjectDescription(e.target.value)}
-        />
-        <FormInput
-          label="Project Manager"
-          fullWidth
-          variant="outlined"
-          value={projectManager}
-          onChange={(e) => setProjectManager(e.target.value)}
+          value={issueDescription}
+          onChange={(e) => setIssueDescription(e.target.value)}
         />
         <Button variant="contained" color="primary" onClick={handleCreateProject}>
-          Create Project
+          Create Issue
         </Button>
       </CardContent>
     </CenteredCard>
   );
 };
 
-export default ProjectForm;
+export default IssueForm;

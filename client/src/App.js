@@ -21,7 +21,9 @@ import Geography from "./pages/geography";
 import Index from "./pages/landing";
 import Test from "./pages/test";
 import Login from "./signIn"
-import Card from "./pages/card";
+import Project from "./pages/project";
+import Issue from "./pages/issue";
+import IssueTable from "./pages/issueTable";
 
 
 const App = () => {
@@ -47,6 +49,7 @@ const App = () => {
         <MyProSidebarProvider>
           <div style={{ height: "100%", width: "100%" }}>
             <main>
+              <Topbar />
               <Routes>
               {isLoggedIn ? (
                   <>
@@ -64,7 +67,9 @@ const App = () => {
                     <Route path="/geography" element={<Geography />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/test" element={<Test/>} />
-                    <Route path="/card" element={<Card />} />
+                    <Route path="/project" element={<Project />} />
+                    <Route path="/issue" element={<Issue />} />
+                    <Route path="/issueTable" element={<IssueTable />} />
                     {/* ... (other routes) */}
                   </>
                 ) : (

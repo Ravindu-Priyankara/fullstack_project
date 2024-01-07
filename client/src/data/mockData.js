@@ -277,6 +277,26 @@ axios.get('http://localhost:5001/record/getProjects')
   })
   .catch(err => console.log(err));
 
+
+  export const mockDataIssue = [];
+
+  // Fetch user data from the server
+  axios.get('http://localhost:5001/record/project/getIssue')
+    .then(response => {
+      const issue = response.data;
+  
+      // Map the retrieved users to the mockDataTeam format
+      const mappedIssues = issue.map(issues => ({
+        id: issues._id, // Assuming your user object has an _id field
+        name: issues.projectName,
+        des: issues.issueDescription,
+      }));
+  
+      // Set the mapped users to the mockDataTeam array
+      mockDataIssue.push(...mappedIssues);
+    })
+    .catch(err => console.log(err));
+
 export const mockTransactions = [
   {
     txId: "01e4dsa",
